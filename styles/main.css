@@ -1,35 +1,41 @@
-main {
+body {
     display: flex;
-    flex-wrap: wrap;
-    
+    flex-direction: column;
+    background-color: blue;
+    color: antiquewhite;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; 
+}
+
+aside {
+    flex: 0 0 300px;
+    max-width: 300px;
+    order: 2; 
+    padding: 20px;
+    align-self: flex-end;
 }
 
 section {
     border: 1px solid #ccc;
     padding: 20px;
-    margin-bottom: 20px;
-    flex: 1;
-    min-width: none;
+    margin: 20px;
+    flex: 1 1 calc(50% - 40px); 
+    max-width: calc(50% - 40px); 
 }
 
-.fish-image{
-    width: 200px
-    
+#locations {
+    flex-basis: 100%; 
+    max-width: 100%; 
 }
 
-body{
-    background-color: blue;
-    color: antiquewhite; /*text color */
+.fish-image {
+    max-width: 100%;
 }
 
-#fish {
-    flex: 1; 
-    flex-basis: 25%;
-    max-width: 50%;
-}
-
-aside {
-    flex-basis: 300px;
-    max-width: 300 px;
-    order: -1;
+header {
+    font-size: 8em;
 }
