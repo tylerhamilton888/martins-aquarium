@@ -1,41 +1,53 @@
 body {
-    display: flex;
-    flex-direction: column;
+    position: relative; /* Set body as the relative positioning context */
     background-color: blue;
     color: antiquewhite;
     margin: 0;
 }
 
 .container {
+    position: relative; /* Set container as the relative positioning context */
     display: flex;
-    justify-content: space-between; 
+    flex-wrap: wrap;
 }
 
 aside {
-    flex: 0 0 300px;
-    max-width: 300px;
-    order: 2; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
     padding: 20px;
-    align-self: flex-end;
+}
+
+.main-content {
+    flex: 1; /* Take remaining space */
 }
 
 section {
     border: 1px solid #ccc;
     padding: 20px;
     margin: 20px;
-    flex: 1 1 calc(50% - 40px); 
-    max-width: calc(50% - 40px); 
+    width: 50%;
 }
 
+#helpful-quotes,
 #locations {
-    flex-basis: 100%; 
-    max-width: 100%; 
+    margin-top: 20px; /* Add spacing between sections */
+}
+
+header {
+    font-size: 8em;
 }
 
 .fish-image {
     max-width: 100%;
 }
 
-header {
-    font-size: 8em;
+
+.fish {
+    background-color: black;
+}
+
+#fish h3 {
+    color: aliceblue;
 }
