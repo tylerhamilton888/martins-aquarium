@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 
-.container {
+.tips {
     position: relative; /* Set container as the relative positioning context */
     display: flex;
     flex-wrap: wrap;
